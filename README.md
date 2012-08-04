@@ -278,6 +278,7 @@ Current Services:
 * Customer
 * Invoice
 * Item
+* Vendor
 
 
 ## Invoice Service
