@@ -73,6 +73,7 @@ require 'quickeebooks/online/model/payment_detail'
 require 'quickeebooks/online/model/credit_card'
 require 'quickeebooks/online/model/credit_charge_info'
 require 'quickeebooks/online/model/credit_charge_response'
+require 'quickeebooks/online/model/vendor'
 
 # Services
 require 'quickeebooks/online/service/filter'
@@ -85,6 +86,7 @@ require 'quickeebooks/online/service/invoice'
 require 'quickeebooks/online/service/item'
 require 'quickeebooks/online/service/entitlement'
 require 'quickeebooks/online/service/payment'
+require 'quickeebooks/online/service/vendor'
 
 #== Windows
 
