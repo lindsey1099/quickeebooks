@@ -11,6 +11,14 @@ module Quickeebooks
           Quickeebooks.logger.flush if Quickeebooks.logger.respond_to?(:flush)
         end
 
+        def self.resource_for_collection
+          self::REST_RESOURCE
+        end
+
+        def self.resource_for_singular
+          self::REST_RESOURCE
+        end
+
       end 
     end    
   end

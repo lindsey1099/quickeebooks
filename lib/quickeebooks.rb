@@ -113,15 +113,18 @@ require 'quickeebooks/windows/model/external_key'
 require 'quickeebooks/windows/model/ship_method'
 require 'quickeebooks/windows/model/sales_tax'
 require 'quickeebooks/windows/model/customer_msg'
+require 'quickeebooks/windows/model/company'
 
 
 # Services
 require 'quickeebooks/windows/service/service_base'
 require 'quickeebooks/windows/service/account'
 require 'quickeebooks/windows/service/customer'
+require 'quickeebooks/windows/service/vendor'
 require 'quickeebooks/windows/service/item'
 require 'quickeebooks/windows/service/invoice'
 require 'quickeebooks/windows/service/sales_rep'
 require 'quickeebooks/windows/service/ship_method'
 require 'quickeebooks/windows/service/sales_tax'
 require 'quickeebooks/windows/service/customer_msg'
+require 'quickeebooks/windows/service/company'

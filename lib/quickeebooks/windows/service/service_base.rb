@@ -176,6 +176,7 @@ module Quickeebooks
         def check_response(response)
           #puts "HTTP Response: #{response.code}"
           parse_xml(response.body)
+   
           status = response.code.to_i
           case status
           when 200
