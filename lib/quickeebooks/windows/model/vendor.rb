@@ -34,7 +34,7 @@ module Quickeebooks
         xml_accessor :sales_term_id, :from => 'SalesTermId', :as => Quickeebooks::Windows::Model::Id
         xml_accessor :open_balance, :from => 'OpenBalance', :as => Quickeebooks::Windows::Model::OpenBalance
         xml_accessor :acct_num, :from => 'AcctNum'
-        xml_accessor :vendor1099, :from => 'Vendor1099'
+        xml_accessor :vendor1099?, :from => 'Vendor1099'
       end
     end
   end
