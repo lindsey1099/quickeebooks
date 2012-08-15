@@ -40,7 +40,7 @@ module Quickeebooks
 
 
         validates_length_of :name, :minimum => 1
-
+        
         def valid_for_update?
           if sync_token.nil?
             errors.add(:sync_token, "Missing required attribute SyncToken for update")

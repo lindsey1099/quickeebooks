@@ -18,6 +18,7 @@ module Quickeebooks
         xml_accessor :id, :from => 'Id', :as => Quickeebooks::Windows::Model::Id
         xml_accessor :sync_token, :from => 'SyncToken', :as => Integer
         xml_accessor :name, :from => 'Name'
+        xml_accessor :legal_name, :from => 'LegalName'  
         xml_accessor :meta_data, :from => 'MetaData', :as => Quickeebooks::Windows::Model::MetaData
         xml_accessor :addresses, :from => 'Address', :as => [Quickeebooks::Windows::Model::Address]
         xml_accessor :email, :from => 'Email', :as => Quickeebooks::Windows::Model::Email

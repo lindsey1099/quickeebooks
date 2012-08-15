@@ -22,6 +22,7 @@ module Quickeebooks
         xml_accessor :legal_address, :from => 'LegalAddress', :as => Quickeebooks::Windows::Model::Address
         xml_accessor :emails, :from => 'Email', :as => [Quickeebooks::Windows::Model::Email]
         xml_accessor :phone, :from => 'Phone', :as => Quickeebooks::Windows::Model::Phone
+        xml_accessor :tax_identifier, :from => 'TaxIdentifier'
 
         def to_xml_ns(options = {})
           to_xml_inject_ns('Company', options)
