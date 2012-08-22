@@ -18,6 +18,7 @@ module Quickeebooks
         attr_accessor :realm_id
         attr_accessor :oauth
         attr_accessor :base_uri
+        attr_accessor :last_response_body
 
         QB_BASE_URI = "https://qbo.intuit.com/qbo1/rest/user/v2"
         XML_NS = %{xmlns:ns2="http://www.intuit.com/sb/cdm/qbo" xmlns="http://www.intuit.com/sb/cdm/v2" xmlns:ns3="http://www.intuit.com/sb/cdm"}
@@ -184,10 +185,7 @@ module Quickeebooks
 
         def check_response(response)
           #puts "HTTP Response: #{response.code}"
-          puts "response body:
-          #{response.body}
-          *****************************
-          "
+          @last_response_body = response.body
           status = response.code.to_i
           case status
           when 200
