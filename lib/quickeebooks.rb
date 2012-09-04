@@ -114,6 +114,7 @@ require 'quickeebooks/windows/model/ship_method'
 require 'quickeebooks/windows/model/sales_tax'
 require 'quickeebooks/windows/model/customer_msg'
 require 'quickeebooks/windows/model/company'
+require 'quickeebooks/windows/model/advanced_report'
 
 
 # Services
@@ -128,3 +129,4 @@ require 'quickeebooks/windows/service/ship_method'
 require 'quickeebooks/windows/service/sales_tax'
 require 'quickeebooks/windows/service/customer_msg'
 require 'quickeebooks/windows/service/company'
+require 'quickeebooks/windows/service/advanced_report'
