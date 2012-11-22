@@ -90,6 +90,8 @@ module Quickeebooks
 
           if custom_field_query != nil
             response = do_http_post(url_for_resource(model::REST_RESOURCE), custom_field_query, {}, {'Content-Type' => 'text/xml'})
+           # puts  @last_response_xml
+            response
           else
             response = do_http_get(url_for_resource(model::REST_RESOURCE), {}, {'Content-Type' => 'text/html'})
           end
@@ -103,6 +105,9 @@ module Quickeebooks
             begin
               results = []
               path_to_nodes = "//xmlns:RestResponse/xmlns:#{model::XML_COLLECTION_NODE}/xmlns:#{model::XML_NODE}"
+              if model::REST_RESOURCE == 'advancedreport'
+                path_to_nodes = "//xmlns:RestResponse/xmlns:Report/xmlns:#{model::XML_COLLECTION_NODE}/xmlns:#{model::XML_NODE}"
+              end
               collection.count = xml.xpath(path_to_nodes).count
               if collection.count > 0
                 xml.xpath(path_to_nodes).each do |xa|

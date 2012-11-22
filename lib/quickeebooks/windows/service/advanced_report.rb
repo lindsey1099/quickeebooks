@@ -18,11 +18,12 @@ module Quickeebooks
 
 
         def list(filters = [], offering_id='ipp', date_macro='All', use_thresholds=false, page = 1, per_page = 20, sort = nil, options = {})
-          custom_field_query = '<?xml version="1.0" encoding="utf-8"?>'
-          custom_field_query += '<AdvancedReportQuery xmlns="http://www.intuit.com/sb/cdm/v2">'
+          custom_field_query = '<?xml version="1.0" encoding="UTF-8"?>'
+          custom_field_query += '<AdvancedReportQuery xmlns="http://www.intuit.com/sb/cdm/v2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">' 
           custom_field_query += "<Summary1099>"
-          custom_field_query += "<OfferingId>#{offering_id}</OfferingId>"
+          #custom_field_query += "<OfferingId>#{offering_id}</OfferingId>"
           custom_field_query += "<DateMacro>#{date_macro}</DateMacro>"
+          custom_field_query += "<ReportBasis>Cash</ReportBasis>"
           custom_field_query += "<UseThresholds>#{use_thresholds}</UseThresholds>"
           custom_field_query += "</Summary1099>"
           custom_field_query += '</AdvancedReportQuery>'
