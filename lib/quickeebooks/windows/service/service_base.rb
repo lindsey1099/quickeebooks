@@ -90,11 +90,11 @@ module Quickeebooks
 
           if custom_field_query != nil
             response = do_http_post(url_for_resource(model::REST_RESOURCE), custom_field_query, {}, {'Content-Type' => 'text/xml'})
-           # puts  @last_response_xml
             response
           else
             response = do_http_get(url_for_resource(model::REST_RESOURCE), {}, {'Content-Type' => 'text/html'})
           end
+          puts @last_response_xml
           parse_collection(response, model)
         end
         
