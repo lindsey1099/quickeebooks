@@ -9,7 +9,8 @@ module Quickeebooks
           custom_field_query += '<VendorQuery xmlns="http://www.intuit.com/sb/cdm/v2">'
           custom_field_query += "<StartPage>#{page}</StartPage><ChunkSize>#{per_page}</ChunkSize>"
           custom_field_query += '</VendorQuery>'
-          fetch_collection(Quickeebooks::Windows::Model::Vendor, nil, filters, page, per_page, sort, options)
+
+          fetch_collection(Quickeebooks::Windows::Model::Vendor, custom_field_query, filters, page, per_page, sort, options)
         end
         
         # def fetch_by_id(id, idDomain = 'QB', options = {})
