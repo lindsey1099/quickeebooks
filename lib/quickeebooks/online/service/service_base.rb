@@ -196,7 +196,7 @@ module Quickeebooks
             raise AuthorizationFailure
           when 400, 500
             err = parse_intuit_error(response.body)
-            ex = IntuitRequestException.new(err[:message])
+            ex = IntuitRequestException.new("Intuit said: #{err[:message]} #{err[:code]} #{err[:cause]}")
             ex.code = err[:code]
             ex.cause = err[:cause]
             raise ex
