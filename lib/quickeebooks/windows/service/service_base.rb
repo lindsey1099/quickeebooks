@@ -204,7 +204,7 @@ module Quickeebooks
         
         def parse_and_raise_exceptione
           err = parse_intuit_error
-          ex = IntuitRequestException.new(err[:message])
+          ex = IntuitRequestException.new("Intuit said: #{err[:message]} #{err[:code]} #{err[:cause]}")
           ex.code = err[:code]
           ex.cause = err[:cause]
           raise ex
